@@ -1,0 +1,65 @@
+@import "../../assets/styles/variable.scss";
+@import "../../assets/styles/mixin.scss";
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $black;
+  padding: 8px 24px;
+  .header-container {
+    display: flex;
+    align-items: center;
+    .hamburger-icon {
+      margin-right: 24px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .header-text {
+      @include title;
+      color: $white;
+      &:hover {
+        cursor: default;
+      }
+    }
+    .logo-img{
+        width:180px;
+        height: 62px;
+    }
+  }
+  .navigation-bar-container {
+    .navigation-bar {
+      display: flex;
+
+      .navigation-text {
+        list-style-type: none;
+        margin: 0px 18px;
+         outline: none;
+        color: $white;
+        @include text;
+        padding: 12px;
+        &:hover {
+          color: $white;
+          border-radius: 8px;
+          background-color: $black;
+          cursor: pointer;
+          box-shadow: 0px 0px 10px -2px #fef0e1;
+        }
+      }
+    }
+  }
+  .social-action-container {
+    .social-icon {
+      width: 22px;
+      height: 22px;
+      margin-right: 12px;
+      border-radius: 5px;
+      &:hover {
+        box-shadow: 0px 0px 10px -2px #fef0e1;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}

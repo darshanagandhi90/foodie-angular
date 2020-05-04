@@ -1,0 +1,8 @@
+<div class="container">
+  <app-header (navigationEmitter)="openCloseNavigation($event)"></app-header>
+  <div class="sub-container">
+    <app-navigation-bar *ngIf="expandNavigation"></app-navigation-bar>
+       <router-outlet></router-outlet>
+  </div>
+  <!-- <app-footer></app-footer> -->
+</div>

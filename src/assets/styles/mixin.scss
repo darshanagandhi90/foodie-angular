@@ -1,0 +1,45 @@
+@import '../../assets/styles/variable.scss';
+
+@mixin title {
+	font-size: 48px;
+	font-family: 'Bokor';
+	font-weight: 800;
+	letter-spacing: 2px;
+}
+@mixin extra-large {
+	font-size: 30px;
+	font-family: 'Bokor';
+	font-weight: 700;
+	letter-spacing: 1.8px;
+}
+@mixin sub-title {
+	font-size: 20px;
+	font-family: 'Bokor';
+	font-weight: 600;
+	letter-spacing: 1.8px;
+}
+@mixin navigation-title {
+	font-size: 18px;
+	font-family: 'Bokor';
+	font-weight: 300;
+	letter-spacing: 1.2px;
+}
+@mixin text {
+	font-size: 16px;
+	font-family: 'Bokor';
+	font-weight: 500;
+}
+@mixin custom-primary-light-scroll-bar {
+	::-webkit-scrollbar {
+		width: 6px;
+		background-color: $light-black;
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: $black;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: $light-black;
+	}
+}

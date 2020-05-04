@@ -1,0 +1,22 @@
+@import "../../assets/styles/variable.scss";
+@import "../../assets/styles/mixin.scss";
+
+.main-container {
+  background-color: $light-black;
+  padding: 8px 0px;
+  .social-action-container {
+      display: flex;
+      justify-content: center;
+    .social-icon {
+      width: 22px;
+      height: 22px;
+      margin:0px 12px;
+      border-radius: 5px;
+      &:hover {
+        box-shadow: 0px 2px 14px 4px #8ed479;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
