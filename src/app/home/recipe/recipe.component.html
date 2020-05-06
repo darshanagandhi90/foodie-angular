@@ -1,0 +1,18 @@
+<div class="main-wrapper">
+	<span class="header">{{ recipeData.recipeName }}</span>
+	<div class="img-ingredients-container">
+		<img [src]="recipeData.recipePhoto" alt="recipe" class="img" />
+		<div class="ingredients-wrapper">
+			<span class="header-text">Ingredients</span>
+			<p class="ingredients">
+				{{ recipeData.ingredients }}
+			</p>
+		</div>
+	</div>
+	<div class="recipe-container">
+		<span class="header-text">Recipe</span>
+		<p class="recipe">
+			{{ recipeData.recipe }}
+		</p>
+	</div>
+</div>
