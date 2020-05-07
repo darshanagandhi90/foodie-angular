@@ -51,6 +51,9 @@
 }
 .header-text {
 	@include extra-large;
-	color: $orange;
+	background: -webkit-linear-gradient($white, $orange);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	// color: $orange;
 	// margin: 16px 0px;
 }

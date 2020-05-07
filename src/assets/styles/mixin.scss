@@ -33,8 +33,9 @@
 }
 @mixin custom-primary-light-scroll-bar {
 	::-webkit-scrollbar {
-		width: 6px;
-		background-color: $light-black;
+		width: 16px;
+
+		background-color: $orange;
 	}
 
 	::-webkit-scrollbar-track {
@@ -42,6 +43,7 @@
 	}
 
 	::-webkit-scrollbar-thumb {
-		background-color: $light-black;
+		border-radius: 50px;
+		background-color: $orange;
 	}
 }

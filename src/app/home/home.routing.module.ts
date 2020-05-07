@@ -3,7 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 
 import {CakeComponent} from './cake/cake.component';
 import {HomeComponent} from './home.component';
-
+import {DessertComponent} from './dessert/dessert.component';
 const routes: Routes = [
 	{
 		path: '',
@@ -16,6 +16,10 @@ const routes: Routes = [
 			{
 				path: 'cake',
 				component: CakeComponent,
+			},
+			{
+				path: 'dessert',
+				component: DessertComponent,
 			},
 		],
 	},

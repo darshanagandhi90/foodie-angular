@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
 	selector: 'app-cake',
@@ -17,10 +18,46 @@ export class CakeComponent implements OnInit {
 		},
 		{
 			id: 3,
-			path: 'assets/images/pastry1.jpg',
+			path: 'assets/images/dessert1.jpg',
 		},
 	];
 	recipeData = [
+		{
+			id: 'oreoCake',
+			recipeName: 'Oreo Cake',
+			recipePhoto: 'assets/images/oreo-cake2.jpeg',
+			ingredients:
+				'**FOR OREO CRUST** 36 3 packets oreo biscuits, original vanilla flavour ¾ cup unsalted butter, melted **FOR CREAM CHEESE CAKE**  500 grams 2 blocks cream cheese, softened 1 tin, 14 oz. condensed milk / milkmaid  1 tsp vanilla extract ½ lemon, juice **FOR CHOCOLATE FROSTING**  1 cup thickened cream, 35% or more milk fat  3 tbsp powdered sugar / icing sugar 2 tbsp cocoa powder 1 tsp vanilla extract 4 strawberries, cut half',
+			recipe:
+				'crush the oreos, add unsalted melted butter and mix well. transfer the prepared oreo crust into springform cake pan. level up and press tight with the help of a cup making sure the base is tight. keep in refrigerator for 15 minutes, allowing to set. meanwhile, in a large mixing bowl take cream cheese, condensed milk / milkmaid. additionally add vanilla extract and lemon juice. with the help of hand blender or a whisk beat continuously. beat till stiff peaks appear.  transfer to cake pan. level it up and refrigerate for 3 hours. after 3 hours, the cake will be well set. loosen the springform cake pan slowly without damaging the cake. decorate the cake with chocolate frosting and chopped strawberry. finally, cut and serve no bake, oreo cream cheesecake or store in refrigerator for a week or more.',
+		},
+		{
+			id: 'blackForestCake',
+			recipeName: 'Black Forest Cake',
+			recipePhoto: 'assets/images/black-forest-cake.jpeg',
+			ingredients:
+				'**FOR CHOCOLATE CAKE* ( DOUBLE THE INGREDIENTS TO PREPARE 2 CAKES FOR 4 LAYER BLACK FOREST CAKE) 1 cup powdered sugar / icing sugar ¾ cup unsalted butter, at room temperature 1 tsp vanilla extract / vanilla essence  1¼ - 1½ cup buttermilk or 1½ cup warm milk + 1 tsp vinegar 1½ cups maida / plain flour / all-purpose flour  ¼ cup unsweetened cocoa powder  1 tsp baking powder  ½ tsp baking soda  pinch of salt  **FOR CHERRY SYRUP**  ¼ cup cherry  ½ cup water  1 tbsp sugar  **FOR FROSTING**  2 cups thickened cream, 35% milk fat  ¼ cup powdered sugar / icing sugar  1 tsp vanilla extract / vanilla essence  **FOR CAKE DECORATION**  1 bar dark chocolate, for curls  9 cherry.',
+			recipe:
+				' Firstly, in a take powdered sugar and butter. beat till the mixture turns smooth and fluffy. further add vanilla extract and buttermilk. combine well.  now sieve maida, cocoa powder, baking powder, baking soda and pinch of salt. then cut and fold gently till the smooth dropping consistency batter formed.  bake the cake at 180 degree celsius for 30 minutes. finally, cool down the cake completely and cut into 2 equal half.  now place 1st layer and top with cherry syrup, frosting and cherries.  repeat for 2, 3 and 4th layer. tart spreading frosting over the sides of cake carefully.  place chocolate curls in the centre and stick on sides.  furthermore, decorate cake and place cherries in the centre. finally, black forest cake is ready to cut and serve.',
+		},
+		{
+			id: 'custardCake',
+			recipeName: 'Custard Cake',
+			recipePhoto: 'assets/images/custard-cake.jpeg',
+			ingredients:
+				'½ cup (100 gm) butter, softened 1 cup (230 gm) sugar 1 cup (255 ml) milk, room temperature 1 tsp  vinegar 1 tsp  vanilla extract 1½ cup (240 gm) maida / plain flour ½ cup (68 gm) custard powder ½ tsp baking soda 1 tsp  baking powder',
+			recipe:
+				'firstly, in a large mixing bowl take ½ cup butter and 1 cup sugar. beat smooth and fluffy till the butter and sugar combine well. now add 1 cup milk, 1 tsp vinegar and 1 tsp vanilla extract. mix well. sieve 1½ cup maida, ½ cup custard powder, ½ tsp baking soda and 1 tsp baking powder. mix well using cut and fold method. transfer the cake batter into the round cake mould and bake at 180 degree celsius for 40 minutes. now spread a generous amount of jam mixture over cake and level out forming a frosting. finally, serve custard cake immediately, or store in a refrigerator for a week.',
+		},
+		{
+			id: 'chocolateCake',
+			recipeName: 'Chocolate Cake',
+			recipePhoto: 'assets/images/chocolate-cake-recipe-2.jpeg',
+			ingredients:
+				'1 cup condensed milk / milkmaid ¾ cup unsalted butter, at room temperature 1½ cup maida / plain flour / all purpose flour 3 tbsp unsweetened cocoa powder  ¾ tsp baking soda 1 tsp baking powder ¼ tsp salt 1 tsp vinegar ¾ tsp vanilla extract ¾ cup warm milk, add as required **FOR CHOCOLATE FROSTING** ½ cup unsalted butter, at room temperature ½ cup unsweetened cocoa powder 2 cups powdered sugar / icing sugar 1 tsp vanilla extract ¼ cup cold milk, add as required',
+			recipe:
+				'**CHOCOLATE CAKE RECIPE** Firstly, in a large mixing bowl take condensed milk and butter. beat in one direction till the mixture turns smooth and fluffy. also sieve, maida, cocoa powder, baking soda, baking powder and salt. then fold gently.  furthermore add vinegar, vanilla extract and warm milk.  mix gently to attain smooth dropping consistency. transfer the cake batter to a cake mould. bake the cake at 180 degree celsius for 25 minutes. cool down the cake completely. **CHOCOLATE FROSTING RECIPE** firstly, in a large mixing bowl take take butter and beat. then add cocoa powder, powdered sugar, vanilla extract add cold milk. beat till the mixture turns smooth and spreadable. **DECORATING CHOCOLATE CAKE RECIPE** spread the generous amount of prepared chocolate frosting. then place another baked cake. again spread the frosting. at last cut the cake to desired shape and serve.',
+		},
 		{
 			id: 'marbleCake',
 			recipeName: 'Marble Cake',
@@ -67,19 +104,28 @@ export class CakeComponent implements OnInit {
 				'firstly, in a large bowl take ½ cup milk, ¼ cup oil, 1 tsp vinegar and 1 tsp vanilla extract. whisk well until everything is well combined. now place a sieve and add ¾ cup maida, ¼ cup cocoa powder, ½ cup powdered sugar, ½ tsp baking powder, ¼ tsp baking soda and ¼ tsp salt. sieve well making sure there are no lumps. mix gently using cut and fold method until the batter is well combined. add 2 tbsp milk if required and mix gently. prepare a smooth cake batter. grease the frying pan with oil to prevent from sticking. pour 2 ladle full of cake batter over pan and spread uniformly. place on the gas stove and cover with a lid. simmer and cook on low flame for 8 minutes. or cook until toothpick inserted comes out clean. transfer the cake over butter paper. be careful as the cake may break. dust with powdered sugar to prevent from sticking. roll gently when the cake is warm and rest for 30 minutes. this helps the cake to bend easily and not break. meanwhile, prepare frosting by taking 1 cup chilled whipping cream. also, add 2 tbsp powdered sugar and 1 tsp vanilla extract. beat on low speed until the cream thickens. after 5 minutes, the cream turns stiff peaks. open the rolled cake without breaking. spread a generous amount of prepared whipping cream.  roll gently, and wrap with cling wrap. refrigerate for 30 minutes or until it sets completely.  finally, cut into thick slice and enjoy chocolate swill roll with a cherry.',
 		},
 		{
-			id: 'pineappleCake',
-			recipeName: 'Pineapple Cake',
-			recipePhoto: 'assets/images/pineapple-cake.jpeg',
+			id: 'iceCreamCake',
+			recipeName: 'Ice Cream Cake',
+			recipePhoto: 'assets/images/ice-cream-cake.jpeg',
 			ingredients:
-				'2 tbsp (45 gram) butter ¼ cup (25 gm) brown sugar 4 slices pineapple 9 cherry **FOR CAKE BATTER** ½ cup (125 ml) oil 1 cup (210 gm) sugar  1 cup (255 ml) milk 1 tsp vinegar 1 tsp pineapple essence 2 cup (300 gm) maida / plain flour 1 tsp baking powder ¼ tsp baking soda pinch salt',
+				'2 cups ice cream, vanilla / any flavour (use full cream ice cream. low-fat or dairy-free ice cream do not work) 1½ cups maida / plain flour / refined flour / all-purpose flour 2 tsp baking powder pinch of salt',
 			recipe:
-				'**CARAMEL TOPPING PREPARATION** firstly, in a pan take 2 tbsp butter and ¼ cup brown sugar. cook on low flame until the sugar dissolves. transfer the butter sugar mixture to butter paper lined cake pan. i have used cake pan of dia: 7 inch, height: 4 inch. place 4 slices of pineapple over the sugar mixture. also place 9 cherry in centre of pineapples. keep aside. **PINEAPPLE CAKE BATTER**  firstly, in a large bowl take ½ cup oil, 1 cup sugar, 1 cup milk, 1 tsp vinegar and 1 tsp pineapple essence. whisk and mix well making sure the sugar is dissolved completely. now place a sieve and add 2 cup maida, 1 tsp baking powder, ¼ tsp baking soda and pinch salt. sieve the flour to prevent from any lumps. mix well using cut and fold method. mix to a thick cake batter consistency without any lumps. transfer the cake batter to the prepared cake tin. pat gently to remove any air incorporated. now bake in a preheated oven at 180 degree celcius for 45 minutes.  bake until the toothpick inserted comes out clean.  cool completely and slowly unmould the cake peeling off the butter paper. finally, enjoy pineapple upside down cake cutting into slices. ',
+				'Firstly, in a large mixing bowl take 2 cups vanilla ice cream. use any flavoured ice cream but low-fat or dairy-free ice cream do not work. allow it to melt naturally. alternatively, defrost to melt faster.  add in 1½ cups maida. also add 2 tsp baking powder, pinch of salt. (avoid baking powder and salt if using self raising flour). mix well to form thick batter. do not worry if the batter is sticky. transfer the ice cream cake batter into bread loaf lined with baking paper. (i have used bread loaf - width: 12 cm, height: 6 cm, length: 26 cm) level it up with a spatula. further bake the cake in preheated oven at 180 degree celsius or 356 degree fahrenheit for 25 to 35 minutes. to bake in microwave or cooker check out the notes section below. to check the cake has baked completely, always insert a toothpick at the centre and see if it comes out clean. else bake for 5 more minutes. cool down the cake completely. also transfer the cake to cooling rack to cool faster.  now slice the cake once cooled completely. finally, enjoy eggless ice cream cake or store in a airtight container for atleast a week. ',
+		},
+		{
+			id: 'biscuitCake',
+			recipeName: 'Biscuit Cake',
+			recipePhoto: 'assets/images/biscuit-cake.jpeg',
+			ingredients:
+				'458 grams parle-g 2/3 rd cup thickened cream ½ cup sugar  1 tbsp butter  ½ cup cocoa powder  1 tsp vanilla extract 5 almonds, chopped  5 walnuts, chopped  **FOR CHOCOLATE SAUCE** 150 grams dark chocolate  ½ cup thickened cream  white chocolate for decoration',
+			recipe:
+				' Firstly, break into small pieces 458 grams parle-g or any digestive biscuits / tea biscuits.  in double boiling method, melt 2/3rd cup thickened cream, ½ cup sugar, 1 tbsp butter and whisk till butter melts completely.  additionally add ½ cup cocoa powder and whisk smooth.  keep whisking till the mixture turns smooth and silky. pour the prepared chocolate mixture over biscuit pieces.  add in 1 tsp vanilla extract, 5 almonds and 5 walnuts.  mix well combining everything. transfer the mixture into 8 inch springform cake pan. level up and press tight with the help of a spoon making sure the base is tight.  keep in refrigerator for 30 minutes, allowing to set. meanwhile prepare the chocolate sauce by melting 150 grams dark chocolate in double boiler method.  dditionally add ½ cup thickened cream and whisk smooth.  keep whisking till the mixture turns smooth and silky.  pour the prepared chocolate sauce into prepared biscuit cake. level out by tapping slightly.  refrigerate for 4 hours or more till the chocolate sauce sets completely.  finally, melt white chocolate and decorate the parle-g biscuit cake before serving.',
 		},
 	];
 	currentPic;
 	prevPic;
 	nextPic;
-	constructor() {}
+	constructor(private _router: Router) {}
 
 	ngOnInit() {
 		this.prevPic = this.data[0];
@@ -87,5 +133,7 @@ export class CakeComponent implements OnInit {
 		this.nextPic = this.data[2];
 	}
 	prevClick() {}
-	nextClick() {}
+	nextClick() {
+		this._router.navigate(['/dessert']);
+	}
 }

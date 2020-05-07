@@ -1,0 +1,22 @@
+<div class="main-container">
+	<div class="heading-container">
+		<span class="header-text">Dessert</span>
+	</div>
+	<div class="photo-container">
+		<img
+			[src]="prevPic.path"
+			alt=""
+			(click)="prevClick()"
+			class="photo-frame-container prev-pic"
+		/>
+		<img [src]="currentPic.path" alt="" class="photo-frame-container current-pic" />
+		<img
+			[src]="nextPic.path"
+			(click)="nextClick()"
+			alt=""
+			class="photo-frame-container next-pic"
+		/>
+	</div>
+
+	<app-recipe [recipeData]="recipe" *ngFor="let recipe of recipeData"></app-recipe>
+</div>
