@@ -1,0 +1,37 @@
+<div class="img-container">
+	<img src="assets/images/vegit2.jpg" alt="" class="img" (click)="imagesClick($event)" />
+	<!-- <img src="assets/images/horse.jpg" alt="" class="img" (click)="imagesClick($event)" /> -->
+</div>
+<div
+	class="comments"
+	*ngFor="let comment of commentsList"
+	[style.top]="comment.height"
+	[style.left]="comment.width"
+>
+	<div class="comment-circle"></div>
+	<span class="comment-label">{{ comment.label }}</span>
+</div>
+
+<div
+	class="comment-section-wrapper"
+	[ngClass]="{
+		'visibility-none': !isCommentSectionVisible,
+		'visibility-shown': isCommentSectionVisible
+	}"
+	[style.top]="yPos"
+	[style.left]="xPos"
+>
+	<div class="comment-section"></div>
+	<div class="comment-box-wrapper">
+		<span class="label">{{ 'Leave a comment' }}</span>
+		<textarea
+			id="w3review"
+			name="w3review"
+			rows="4"
+			cols="50"
+			class="input-box"
+			[(ngModel)]="emptyCommentBox"
+		></textarea>
+		<button class="send-btn" (click)="addCommentValue($event)">{{ 'Send' }}</button>
+	</div>
+</div>

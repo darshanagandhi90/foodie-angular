@@ -31,6 +31,13 @@
 	letter-spacing: 1.6px;
 	line-height: 1.8;
 }
+@mixin sub-text {
+	font-size: 14px;
+	font-family: 'Bokor';
+	font-weight: 500;
+	letter-spacing: 1px;
+	line-height: 1.8;
+}
 @mixin custom-primary-light-scroll-bar {
 	::-webkit-scrollbar {
 		width: 6px;

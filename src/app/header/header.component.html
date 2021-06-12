@@ -1,23 +1,37 @@
 <div class="main-container">
-  <div class="header-container">
-    <img
-      src="assets/icons/hamburger.svg"
-      alt=""
-      class="hamburger-icon"
-      (click)="openCloseNavigation()"
-    />
-    <span class="header-text">Foodie</span>
-    <!-- <img src="../../assets/images/pic6.png" alt="foodie" class="logo-img"> -->
-  </div>
-  <div class="navigation-bar-container">
-    <div class="navigation-bar">
-      <span class="navigation-text" [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</span>
-      <!-- <span class="navigation-text">Archive</span> -->
-      <span class="navigation-text">Category</span>
-      <!-- <span class="navigation-text">Pages</span> -->
-      <span class="navigation-text">Contact</span>
-      <span class="navigation-text" [routerLink]="['/about-us']" routerLinkActive="router-link-active" >About Me</span>
-    </div>
-  </div>
-  
+	<div class="header-container">
+		<img
+			src="assets/icons/hamburger.svg"
+			alt=""
+			class="hamburger-icon"
+			(click)="openCloseNavigation()"
+		/>
+		<span class="header-text">Foodie</span>
+		<!-- <img src="../../assets/images/pic6.png" alt="foodie" class="logo-img"> -->
+	</div>
+	<div class="navigation-bar-container">
+		<div class="navigation-bar">
+			<span
+				class="navigation-text"
+				[routerLink]="['/home']"
+				routerLinkActive="router-link-active"
+				>Home</span
+			>
+			<!-- <span class="navigation-text">Archive</span> -->
+			<span
+				class="navigation-text"
+				[routerLink]="['/category']"
+				routerLinkActive="router-link-active"
+				>Category</span
+			>
+			<!-- <span class="navigation-text">Pages</span> -->
+			<span class="navigation-text">Contact</span>
+			<span
+				class="navigation-text"
+				[routerLink]="['/about-us']"
+				routerLinkActive="router-link-active"
+				>About Me</span
+			>
+		</div>
+	</div>
 </div>
